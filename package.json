@@ -55,7 +55,20 @@
         "watch:labextension": "jupyter labextension watch ."
     },
     "dependencies": {
-        "@jupyterlab/application": "^4.0.0"
+        "@jupyterlab/application": "^4.0.0",
+        "@jupyterlab/apputils": "^4.0.0",
+        "@jupyterlab/services": "7.2.2",
+        "@jupyterlab/ui-components": "^4.2.2",
+        "@lumino/widgets": "^2.3.2",
+        "@phosphor/messaging": "^1.2.2",
+        "@phosphor/widgets": "^1.6.0",
+        "crypto-js": "4.2.0",
+        "json-schema": "^0.4.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-redux": "^9.1.2",
+        "redux": "^5.0.1",
+        "reselect": "^3.0.1"
     },
     "devDependencies": {
         "@jupyterlab/builder": "^4.0.0",

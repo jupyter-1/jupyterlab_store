@@ -288,7 +288,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyterlab/apputils@npm:^4.3.2":
+"@jupyterlab/apputils@npm:^4.0.0, @jupyterlab/apputils@npm:^4.3.2":
   version: 4.3.2
   resolution: "@jupyterlab/apputils@npm:4.3.2"
   dependencies:
@@ -474,7 +474,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyterlab/services@npm:^7.2.2":
+"@jupyterlab/services@npm:7.2.2, @jupyterlab/services@npm:^7.2.2":
   version: 7.2.2
   resolution: "@jupyterlab/services@npm:7.2.2"
   dependencies:
@@ -807,6 +807,131 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phosphor/algorithm@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@phosphor/algorithm@npm:1.2.0"
+  checksum: 3e4abb6dce85a931e9e1a75d9ef372aeac7a0a0642e6f15f63abc3dcb8ed494f547864de747b36333f36259aac879798c1914aeb2fd0f2a50781b176ab3a8cb5
+  languageName: node
+  linkType: hard
+
+"@phosphor/collections@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@phosphor/collections@npm:1.2.0"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+  checksum: fcc409f353a16f288da027cc89335e2272cc6d1cde2511d50435a476296bd499586bc03d4d5c879d7c4d576938d2547af29ab6a33f38f8ebb1a249e576b20665
+  languageName: node
+  linkType: hard
+
+"@phosphor/commands@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "@phosphor/commands@npm:1.7.2"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+    "@phosphor/coreutils": ^1.3.1
+    "@phosphor/disposable": ^1.3.1
+    "@phosphor/domutils": ^1.1.4
+    "@phosphor/keyboard": ^1.1.3
+    "@phosphor/signaling": ^1.3.1
+  checksum: 16ac3d9c26fa9c78409c75242f979a437d8f189df9e2690abe10d1177562a1c797f6bae80ad41e316475ccb14ca26385a9b56cae2c810ba7c3cb27d8cfab04f0
+  languageName: node
+  linkType: hard
+
+"@phosphor/coreutils@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@phosphor/coreutils@npm:1.3.1"
+  checksum: 7f2b4c3835624922501e375ec4046e63707f9a36e23cb3582a1f17645710849debd9b797e027d2c2a8604e7d9ed5fac0596d56dff604ff2f184e4dfe3f84c8db
+  languageName: node
+  linkType: hard
+
+"@phosphor/disposable@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@phosphor/disposable@npm:1.3.1"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+    "@phosphor/signaling": ^1.3.1
+  checksum: 49803bed132da55ee4f1d5a61105f43b9f0900a4e8bd01abf88512b8a328539f4673402045b20c6502a5d8cd64b6a25beb97d50ccfed74be7a2af06895a8fdfa
+  languageName: node
+  linkType: hard
+
+"@phosphor/domutils@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@phosphor/domutils@npm:1.1.4"
+  checksum: be979b866132aaabfcb088f304cca93cc6aa469eeff3604d79bc7e7853a830d1beea2deb305147ff90016c898cee5d8eed986bbf2b406e1cec841e66ab264709
+  languageName: node
+  linkType: hard
+
+"@phosphor/dragdrop@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@phosphor/dragdrop@npm:1.4.1"
+  dependencies:
+    "@phosphor/coreutils": ^1.3.1
+    "@phosphor/disposable": ^1.3.1
+  checksum: 632c4905a6fbc8ee9b3330e0bd42ebc620ddb8fc6987ad877f66cc55a19c661262ff18d70a0ed4ded3d3bb296a518d870812ee7b316fbbbdc7bf55c0d915958b
+  languageName: node
+  linkType: hard
+
+"@phosphor/keyboard@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@phosphor/keyboard@npm:1.1.3"
+  checksum: dc18663000dfdcb16e5d8f77a1c79d1308c09086a31359e8a51ade88964ae39ca8863f2a3b61f7ede7e30c5a8da75b06fcabd329177fb593b9550bbd438020cb
+  languageName: node
+  linkType: hard
+
+"@phosphor/messaging@npm:^1.2.2, @phosphor/messaging@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@phosphor/messaging@npm:1.3.0"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+    "@phosphor/collections": ^1.2.0
+  checksum: 127893179000a85a9713be7e59ec469227afbe7f07147edd63ee9621bb6d50cabdbaca51a8824fb07c332cba51f39e8f75e041df45e08fd9a465dda3f476b6f6
+  languageName: node
+  linkType: hard
+
+"@phosphor/properties@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@phosphor/properties@npm:1.1.3"
+  checksum: 5d4e601641625bdf26b18b154784154a0b6519255800b685d5c388059ebed9d3ba4e495857d82fb058f13df1ae77adc0a751d01ba8a0bda4991469b83e2028d4
+  languageName: node
+  linkType: hard
+
+"@phosphor/signaling@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@phosphor/signaling@npm:1.3.1"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+  checksum: 474b3d45bb7ec2adcaf37dbf4b78c7ff8c9ac8f5d3c61c44157eacb6d0f0446ed520f6e069746e7ddfca87a5b2b9c32a8b74301a7bf1c45904660e56b5680885
+  languageName: node
+  linkType: hard
+
+"@phosphor/virtualdom@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@phosphor/virtualdom@npm:1.2.0"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+  checksum: d5d12e566a4682ca44abe64957dc50eb87971c2c922da1d71e8d3add05053e1fb7d86663557594b8b5b4f592c2e4b8e2494c30aa72e19285e18e14790c7b62ee
+  languageName: node
+  linkType: hard
+
+"@phosphor/widgets@npm:^1.6.0":
+  version: 1.9.3
+  resolution: "@phosphor/widgets@npm:1.9.3"
+  dependencies:
+    "@phosphor/algorithm": ^1.2.0
+    "@phosphor/commands": ^1.7.2
+    "@phosphor/coreutils": ^1.3.1
+    "@phosphor/disposable": ^1.3.1
+    "@phosphor/domutils": ^1.1.4
+    "@phosphor/dragdrop": ^1.4.1
+    "@phosphor/keyboard": ^1.1.3
+    "@phosphor/messaging": ^1.3.0
+    "@phosphor/properties": ^1.1.3
+    "@phosphor/signaling": ^1.3.1
+    "@phosphor/virtualdom": ^1.2.0
+  checksum: cb9dbd545ae1e9b62c64f3a3897c9295eefc1281b9d4e30be75df9f9f0f0403ffeadb620e6580e2b10b1247785859df8291a1731da22367afe46c3025b84d1eb
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -957,6 +1082,13 @@ __metadata:
   version: 0.1.6
   resolution: "@types/source-list-map@npm:0.1.6"
   checksum: 9cd294c121f1562062de5d241fe4d10780b1131b01c57434845fe50968e9dcf67ede444591c2b1ad6d3f9b6bc646ac02cc8f51a3577c795f9c64cf4573dcc6b1
+  languageName: node
+  linkType: hard
+
+"@types/use-sync-external-store@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@types/use-sync-external-store@npm:0.0.3"
+  checksum: 161ddb8eec5dbe7279ac971531217e9af6b99f7783213566d2b502e2e2378ea19cf5e5ea4595039d730aa79d3d35c6567d48599f69773a02ffcff1776ec2a44e
   languageName: node
   linkType: hard
 
@@ -1783,6 +1915,13 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
+  languageName: node
+  linkType: hard
+
+"crypto-js@npm:4.2.0":
+  version: 4.2.0
+  resolution: "crypto-js@npm:4.2.0"
+  checksum: f051666dbc077c8324777f44fbd3aaea2986f198fe85092535130d17026c7c2ccf2d23ee5b29b36f7a4a07312db2fae23c9094b644cc35f7858b1b4fcaf27774
   languageName: node
   linkType: hard
 
@@ -3326,6 +3465,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-schema@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "json-schema@npm:0.4.0"
+  checksum: 66389434c3469e698da0df2e7ac5a3281bcff75e797a5c127db7c5b56270e01ae13d9afa3c03344f76e32e81678337a8c912bdbb75101c62e487dc3778461d72
+  languageName: node
+  linkType: hard
+
 "json-stable-stringify-without-jsonify@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1"
@@ -3367,18 +3513,31 @@ __metadata:
   resolution: "jupyterlab-store@workspace:."
   dependencies:
     "@jupyterlab/application": ^4.0.0
+    "@jupyterlab/apputils": ^4.0.0
     "@jupyterlab/builder": ^4.0.0
+    "@jupyterlab/services": 7.2.2
+    "@jupyterlab/ui-components": ^4.2.2
+    "@lumino/widgets": ^2.3.2
+    "@phosphor/messaging": ^1.2.2
+    "@phosphor/widgets": ^1.6.0
     "@types/json-schema": ^7.0.11
     "@types/react": ^18.0.26
     "@types/react-addons-linked-state-mixin": ^0.14.22
     "@typescript-eslint/eslint-plugin": ^6.1.0
     "@typescript-eslint/parser": ^6.1.0
+    crypto-js: 4.2.0
     css-loader: ^6.7.1
     eslint: ^8.36.0
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^5.0.0
+    json-schema: ^0.4.0
     npm-run-all: ^4.1.5
     prettier: ^3.0.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-redux: ^9.1.2
+    redux: ^5.0.1
+    reselect: ^3.0.1
     rimraf: ^5.0.1
     source-map-loader: ^1.0.2
     style-loader: ^3.3.1
@@ -4293,6 +4452,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-redux@npm:^9.1.2":
+  version: 9.1.2
+  resolution: "react-redux@npm:9.1.2"
+  dependencies:
+    "@types/use-sync-external-store": ^0.0.3
+    use-sync-external-store: ^1.0.0
+  peerDependencies:
+    "@types/react": ^18.2.25
+    react: ^18.0
+    redux: ^5.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    redux:
+      optional: true
+  checksum: 1ee9cf41f29f68267320b4fc3bcf6a76a3825c82441612582678ddd827a2b60834f687d2a8b755c905885dfce476a1eb41af42b36f4dd71f8ee9991296a1e515
+  languageName: node
+  linkType: hard
+
 "react@npm:>=17.0.0 <19.0.0, react@npm:^18.2.0":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
@@ -4355,6 +4533,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"redux@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "redux@npm:5.0.1"
+  checksum: e74affa9009dd5d994878b9a1ce30d6569d986117175056edb003de2651c05b10fe7819d6fa94aea1a94de9a82f252f986547f007a2fbeb35c317a2e5f5ecf2c
+  languageName: node
+  linkType: hard
+
 "regexp.prototype.flags@npm:^1.5.2":
   version: 1.5.2
   resolution: "regexp.prototype.flags@npm:1.5.2"
@@ -4378,6 +4563,13 @@ __metadata:
   version: 1.0.0
   resolution: "requires-port@npm:1.0.0"
   checksum: eee0e303adffb69be55d1a214e415cf42b7441ae858c76dfc5353148644f6fd6e698926fc4643f510d5c126d12a705e7c8ed7e38061113bdf37547ab356797ff
+  languageName: node
+  linkType: hard
+
+"reselect@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "reselect@npm:3.0.1"
+  checksum: c7ce544bae92db2dc6e768bc2dcc1248f9a21ada22ab5906c5e3c472e1dbc5f080889e5a715b8a2535e652d74c599dd090f5a68bcbe7e6f88053b7599ef4e8d3
   languageName: node
   linkType: hard
 
@@ -5354,6 +5546,15 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: fbdba6b1d83336aca2216bbdc38ba658d9cfb8fc7f665eb8b17852de638ff7d1a162c198a8e4ed66001ddbf6c9888d41e4798912c62b4fd777a31657989f7bdf
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.0.0":
+  version: 1.2.2
+  resolution: "use-sync-external-store@npm:1.2.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: fe07c071c4da3645f112c38c0e57beb479a8838616ff4e92598256ecce527f2888c08febc7f9b2f0ce2f0e18540ba3cde41eb2035e4fafcb4f52955037098a81
   languageName: node
   linkType: hard
 
