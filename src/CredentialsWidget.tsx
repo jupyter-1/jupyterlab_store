@@ -372,7 +372,7 @@ for credential in json_data["credentials"]:
     if credential["tag"] is not None and len(credential["tag"]) > 0:` +
           (token !== undefined
             ? `
-        exec("%s = %s" % (credential["tag"],decrypt(credential["value"])))
+        pass
 `
             : `
         pass
@@ -383,10 +383,6 @@ for credential in json_data["credentials"]:
         : enc_credentials
             .map(credential => {
               return (
-                (credential.tag !== undefined
-                  ? credential.tag + "=decrypt('" + credential.value + "')"
-                  : '') +
-                '\n' +
                 'json_data_to_write["credentials"].append({"id":"' +
                 credential.id +
                 '","tag":"' +

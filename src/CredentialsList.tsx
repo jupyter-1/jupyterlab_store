@@ -4,7 +4,7 @@
 declare let require: any;
 const CryptoJS = require('crypto-js');
 
-import * as React from 'react';
+import React, { useCallback, useState } from 'react';
 import { connect } from 'react-redux';
 
 import '../style/index.css';
@@ -100,64 +100,87 @@ const CredentialsList: React.FC<Props> = props => {
     props.setActiveToken('');
   });
 
+  const [errMsg, setErrMsg] = useState('');
+
+  const valid = useCallback((event, credential) => {
+    const tag = event.target.value;
+    if (/^[a-zA-Z0-9_]+$/.test(tag)) {
+      props.setCredential(
+        credential.id,
+        event.target.value,
+        credential.value,
+        true
+      );
+      setErrMsg('');
+    } else {
+      setErrMsg(tag.replace(/[a-zA-Z0-9_]/g, ''));
+    }
+  }, []);
+
   return props.isConnected ? (
     props.argtoken !== undefined && props.argtoken === props.token ? (
-      <table className="jp-CredentialsTable">
-        <tbody>
-          <tr>
-            <th></th>
-            <th>Key</th>
-            <th>Value</th>
-            <th className="jp-Column"></th>
-          </tr>
-          {props.credentials.map(credential => (
+      <div>
+        <table className="jp-CredentialsTable">
+          <tbody>
             <tr>
-              <td className="jp-StarColumn">{credential.changed ? '*' : ''}</td>
-              <td className="jp-Cell">
-                <input
-                  className={'jp-Input'}
-                  type="text"
-                  value={credential.tag !== undefined ? credential.tag : ''}
-                  onChange={event =>
-                    props.setCredential(
-                      credential.id,
-                      event.target.value,
-                      credential.value,
-                      true
-                    )
-                  }
-                />
-              </td>
-              <td className="jp-Cell">
-                <input
-                  className="jp-Input"
-                  type="password"
-                  value={credential.value !== undefined ? credential.value : ''}
-                  onChange={event =>
-                    props.setCredential(
-                      credential.id,
-                      credential.tag,
-                      event.target.value,
-                      true
-                    )
-                  }
-                />
-              </td>
-              <td className="jp-Column">
-                <button
-                  className="jp-Button"
-                  onClick={() => {
-                    props.removeCredential(credential.id);
-                    props.onRemoveCredential(credential.tag);
-                  }}
-                >
-                  Delete
-                </button>
-              </td>
+              <th></th>
+              <th>Key</th>
+              <th>Value</th>
+              <th className="jp-Column"></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+            {props.credentials.map(credential => (
+              <tr>
+                <td className="jp-StarColumn">
+                  {credential.changed ? '*' : ''}
+                </td>
+                <td className="jp-Cell">
+                  <input
+                    className={'jp-Input'}
+                    type="text"
+                    value={credential.tag !== undefined ? credential.tag : ''}
+                    onChange={event => valid(event, credential)}
+                  />
+                </td>
+                <td className="jp-Cell">
+                  <input
+                    className="jp-Input"
+                    type="password"
+                    value={
+                      credential.value !== undefined ? credential.value : ''
+                    }
+                    onChange={event =>
+                      props.setCredential(
+                        credential.id,
+                        credential.tag,
+                        event.target.value,
+                        true
+                      )
+                    }
+                  />
+                </td>
+                <td className="jp-Column">
+                  <button
+                    className="jp-Button"
+                    onClick={() => {
+                      props.removeCredential(credential.id);
+                      props.onRemoveCredential(credential.tag);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {errMsg.length > 0 && (
+          <div className="jp-CredentialMsg">
+            Hint: Only letters, numbers and underscores can be used in key.
+            <br />
+            Error input: {errMsg}
+          </div>
+        )}
+      </div>
     ) : (
       <PasswordSelector
         argToken={props.argtoken}

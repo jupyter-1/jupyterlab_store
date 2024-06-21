@@ -87,7 +87,15 @@
 }
 
 .jp-CredentialIcon {
-  background-image: url('icon_credential.png');
+  background-image: url('icon_key.png');
+}
+
+.jp-CredentialIcon svg {
+  display: none !important;
+}
+
+.jp-CredentialMsg {
+  padding: 0 20px;
 }
 
 .jp-KeyIcon {
